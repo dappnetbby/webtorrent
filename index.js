@@ -47,6 +47,8 @@ class WebTorrent extends EventEmitter {
   constructor (opts = {}) {
     super()
 
+    this.ethereumWallet = opts.ethereumWallet
+
     if (typeof opts.peerId === 'string') {
       this.peerId = opts.peerId
     } else if (Buffer.isBuffer(opts.peerId)) {
