@@ -36,7 +36,6 @@
     "os": false
   },
   "dependencies": {
-    "axonproto-lib": "file:../axon-lib",
     "@chainsafe/libp2p-noise": "^12.0.2",
     "@libp2p/mplex": "^8.0.4",
     "@libp2p/tcp": "^7.0.3",
@@ -46,6 +45,7 @@
     "@thaunknown/simple-peer": "^9.12.1",
     "@webtorrent/http-node": "^1.3.0",
     "addr-to-ip-port": "^1.5.1",
+    "axonproto-lib": "file:../axon-lib",
     "bitfield": "^4.0.0",
     "bittorrent-dht": "^10.0.1",
     "bittorrent-protocol": "^3.4.2",
@@ -57,8 +57,9 @@
     "debug": "^4.3.2",
     "end-of-stream": "^1.4.4",
     "escape-html": "^1.0.3",
+    "ethers": "^6.6.5",
     "fs-chunk-store": "^2.0.3",
-    "http-node": "github:feross/http-node#webtorrent",
+    "http-node": "github:webtorrent/http-node",
     "immediate-chunk-store": "^2.2.0",
     "it-first": "^3.0.2",
     "it-pipe": "^3.0.1",
@@ -154,10 +155,6 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/webtorrent/webtorrent.git"
-  },
   "scripts": {
     "build": "npm run build-js && npm run build-chromeapp",
     "build-chromeapp": "browserify --browser-field=chromeapp --standalone WebTorrent . | minify --mangle=false > webtorrent.chromeapp.js",
